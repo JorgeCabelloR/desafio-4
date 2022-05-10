@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Header from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import {Container, Row, Col} from "react-bootstrap"
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header category1={"Ropa"} category2={"Calzado"} category3={"Accesorios"}/>
+      <main className="main-content">
+        <Container>
+          <Row className="my-5">
+            <Col>
+              <h1> contenido </h1>
+            </Col>
+          </Row>
+        </Container>
+      </main>
+      <Footer greeting={"Hola mundo"} greeting2={"Segundo saludo"}  greeting3={"Tercer saludo"}/>
     </div>
   );
 }
